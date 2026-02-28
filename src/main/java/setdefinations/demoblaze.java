@@ -19,7 +19,7 @@ public class demoblaze {
 		driver = new EdgeDriver();
         driver.get("https://www.demoblaze.com/");
         driver.manage().window().maximize(); 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	@When("user click on signup button on navbar")
 	public void signup()

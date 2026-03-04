@@ -19,28 +19,28 @@ public class demoblaze {
 		driver = new EdgeDriver();
         driver.get("https://www.demoblaze.com/");
         driver.manage().window().maximize(); 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	@When("user click on signup button on navbar")
-	public void signup()
+	public void signup_nav()
 	{
 		driver.findElement(By.id("signin2")).click();
 	}
 	
 	@When("user enter username")
-	public void username()
+	public void username_demo()
 	{
-		driver.findElement(By.id("sign-username")).sendKeys("mobita");;
+		driver.findElement(By.id("sign-username")).sendKeys("vaibhavi");;
 	}
 	
 	@And("user enter password")
-	public void password()
+	public void password_demo()
 	{
-	driver.findElement(By.id("sign-password")).sendKeys("1234567");
+	driver.findElement(By.id("sign-password")).sendKeys("vaibhavi@123");
 	}
 	
 	@And("click on signup button of demoblaze")
-	public void sign_button()
+	public void sign_button_demoblaze()
 	{
 		driver.findElement(By.xpath("//button[@onclick='register()']"));
 	}
